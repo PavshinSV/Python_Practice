@@ -1,5 +1,4 @@
 # Найти максимальное из пяти чисел
-import numbers
 
 amount = 5
 number = []
