@@ -1,17 +1,17 @@
 # Указав номер четверти прямоугольной системы координат, показать допустимые значения координат для точек этой четверти
-break_point=False
+break_point = False
 while not break_point:
     kvadrant_number = int(input('Введите номер квадранта (четверти): '))
-    if 0<kvadrant_number<5:
+    if 0 < kvadrant_number < 5:
         break_point = True
     else:
         print('Введен не правильный номер квадранта')
 
-if kvadrant_number==1:
+if kvadrant_number == 1:
     print('В указанной четверти значения Х и Y должны принадлежать диапозону от 0 до плюс бесонечности')
-elif kvadrant_number==3:
+elif kvadrant_number == 3:
     print('В указанной четверти значения Х и Y должны принадлежать диапозону от 0 до минус бесонечности')
-elif kvadrant_number==2:
+elif kvadrant_number == 2:
     print('В указанной четверти значения Х должны принадлежать диапозону от 0 до минус бесонечности, Y - от 0 до плюс бесонечности')
-elif kvadrant_number==4:
+elif kvadrant_number == 4:
     print('В указанной четверти значения Х должны принадлежать диапозону от 0 до плюс бесонечности, Y - от 0 до минус бесонечности')

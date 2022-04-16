@@ -11,7 +11,7 @@ week = ["Понедельник", "Вторник", "Среда",
 
 weekend = "Рабочий день"
 
-if day==7 or day==6:
-    weekend= "Выходной день"
+if day == 7 or day == 6:
+    weekend = "Выходной день"
 
 print(f"День недели - {week[day-1]}, {weekend}")
