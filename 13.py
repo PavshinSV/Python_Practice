@@ -2,4 +2,5 @@
 
 test_string = input('Введите строку в которой будет произведен поиск: ')
 to_search = input('Введите число вхождений которой нужно найти: ')
-print(f'Количество вхождений искомой строки в первичную - {test_string.lower().count(to_search.lower())}')
+print(
+    f'Количество вхождений искомой строки в первичную - {test_string.lower().count(to_search.lower())}')
