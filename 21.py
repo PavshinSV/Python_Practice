@@ -5,3 +5,11 @@
 # список: ["йцу", "фыв", "ячс", "цук", "йцукен"], ищем: "йцу", ответ: -1
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
+
+list_of_words = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
+substring = 'йцу'
+index_of_second_entry = list_of_words.index(substring,list_of_words.index(substring)+1)
+if list_of_words.count(substring)<2:
+    print(-1)
+else:
+    print(index_of_second_entry)
