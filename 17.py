@@ -6,7 +6,7 @@ pos=input(f'Введите, через запятую, позиции элеме
 
 with open('positions.txt', 'w') as positions:
     for i in pos:
-        positions.write(f'{i}\n')
+        positions.write(f'{i}\n') 
 
 spisok=[]
 step = 1
@@ -27,4 +27,3 @@ with open('positions.txt', 'r') as positions:
         multiply*=spisok[int(element.strip())]
 
 print(f'Произведение элементов с введенными позициями равно {multiply}')
-
