@@ -1,8 +1,5 @@
 # Найти НОК двух чисел
 
-from re import I
-
-
 def get_easy(num):
     res=[2]
     for i in range(3,num+1):
@@ -31,6 +28,9 @@ def get_base(number,li):
         number/=element**b
     return bases
 
+#def get_max_base(li):
+    
+
 
 a=[int(input(f'Введите {x+1}е натуральное число: ')) for x in range(0,3)]
 biger=max(a)
@@ -39,5 +39,3 @@ limit=int(biger**0.5)
 
 easy=get_easy(limit)
 bases=[get_base(el,easy) for el in a]
-eb=list(zip(easy,bases))
-print(eb)
