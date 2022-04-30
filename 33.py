@@ -12,4 +12,20 @@ def polynom(ext):
     else:
         return str(algebra.psevdo())+'*x^'+str(ext)+' + '+polynom(ext-1)
 
-print(polynom(3))
+try_input = True
+
+while try_input:
+    try:
+        k = int(input('Введите натуральное положительное число (основание степени): '))
+    except ValueError:
+        print(
+            'Введенное вами значение не является целым числом больше нуля. Повторите ввод')
+    else:
+        try_input=False
+
+p=polynom(k)
+
+print(f'По введенному Вами основанию степени многочлен представляется в виде: {p}')
+
+with open('polynomes.txt', 'a') as data:
+    data.write(f'{p}\n')
