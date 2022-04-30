@@ -28,14 +28,33 @@ def get_base(number,li):
         number/=element**b
     return bases
 
-#def get_max_base(li):
-    
+def get_max_base(li):
+    length=len(li[0])
+    res=[]
+    for i in range(0,length):
+        max=0
+        for j in li:
+            if j[i]>max:
+                max=j[i]
+        res.append(max)
+    return res
 
+def nok(e, mb):
+    res=1
+    for i in range(0,len(e)):
+        res*=e[i]**mb[i]
+    return res
 
-a=[int(input(f'Введите {x+1}е натуральное число: ')) for x in range(0,3)]
+a=[int(input(f'Введите {x+1}е натуральное число: ')) for x in range(0,2)]
 biger=max(a)
 
 limit=int(biger**0.5)
 
 easy=get_easy(limit)
+print(easy)
 bases=[get_base(el,easy) for el in a]
+print(bases)
+max_bases=get_max_base(bases)
+print(max_bases)
+kratnoe=nok(easy,max_bases)
+print(f'Наименьшее общее кратное введенных чисел равно: {kratnoe}')
