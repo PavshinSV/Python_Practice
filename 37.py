@@ -6,15 +6,15 @@
 n = [5, 2, 3, 4, 6, 1, 7]
 result = []
 length = len(n)
-indexes = []
 
-for j in range(0, (length - 1)):
+for j in range(0, (length)):
     new_list = True
+    indexes = []
     while new_list:
         r = []
         new_list = False
         for i in range(j, length):
-            if not i:
+            if i==j:
                 r.append(n[i])
             if len(r) == 1:
                 if not indexes.count(i) and n[i] > r[-1]:
